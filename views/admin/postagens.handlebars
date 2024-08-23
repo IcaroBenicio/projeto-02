@@ -1,0 +1,21 @@
+<div style="margin-left: 10%; margin-top:20px;">
+    <h2 style="color: rgba(255, 255, 255, 0.555);">Lista de postagens:</h2>
+    <a href="/admin/postagens/add"><button class="btn btn-success">Nova postagem</button></a>
+</div>
+{{#each postagem}}
+<div class="card mt-4" style="max-width:700px; margin:0 auto; background-color:rgba(14, 14, 177, 0.808);  color: rgba(255, 255, 255, 0.712);">
+    <div class="card-body" style="border-radius: 5px;">         
+        <h4 style="display: inline-block;">{{titulo}}</h4>     
+        <small style="display: block;">Slug: {{slug}}</small>
+        <p>Conteúdo: {{conteudo}}</p>
+        <p>Descrição: {{descricao}}</p>
+        <small>Categoria: {{categoria.nome}}</small>
+        <br>
+        <small><p style="display: inline-block;">data de criação : </p>{{data}}</small>
+        <a href="/admin/edit/postagem/{{_id}}"><button class="btn btn-success" style="display: inline-block;">Editar</button></a>
+        <a href="/admin/delete/postagem/{{_id}}"><button class="btn btn-danger" style="display: inline-block;" >Deletar</button></a>
+    </div>
+</div>
+{{else}}
+<h1 class="mt-5" style="color: white; text-align:center; text-shadow:1px 1px 1px black">Nenhuma postagem resgistrada!</h1>
+{{/each}}

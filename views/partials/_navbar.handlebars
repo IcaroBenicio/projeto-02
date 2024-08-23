@@ -1,0 +1,22 @@
+    <header>
+        <nav class="conteiner_nav_header"> 
+            <a href="/">Home</a>
+            <a href="/categoria">Categoria</a>
+            <a href="/admin/cartas">Cartas</a>
+            <a href="/admin/posts">Posts</a>
+            <a href="/admin/categorias">ADM Categorias</a>
+            <a href="/admin/postagens">ADM Postagens</a>
+            <a href="#">Saiba Mais</a>
+            {{#if user}}
+                  <div style=" list-style: none; padding: 10px; 
+                      color: rgba(255, 255, 255, 0.712);">
+                      <a href="/user/logout" style="  text-decoration: none; padding: 10px;  transition: .5s; border-radius: 3px;" class="link-login-navbar-projeto-01">Logout</a>
+                 </div>
+            {{else}}
+              <div style=" list-style: none; padding: 10px; 
+                  color: rgba(255, 255, 255, 0.712);">
+                 <a href="/user/login" style="  text-decoration: none; padding: 10px;  transition: .5s; border-radius: 3px;" class="link-login-navbar-projeto-01">Login</a> / <a href="/user/registro" style=" text-decoration: none; padding: 10px;  transition: .5s; border-radius: 3px;" class="link-login-navbar-projeto-01">Registro</a>
+            {{/if}}
+              </div>
+        </nav>
+    </header>   

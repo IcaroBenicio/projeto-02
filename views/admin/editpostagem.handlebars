@@ -1,0 +1,32 @@
+<div style="color: white; position:relative; left:50%; top:50%; transform:translate(-50%, -50%); width:500px; text-shadow: 1px 1px 1px rgb(7, 7, 7); border:1px solid black; padding:40px 20px"  >
+    <form action="/admin//postagem/editada  " method="post">
+    <h2 style="margin-bottom: 50px; color:black; text-shadow: 1px 1px 1px rgb(255, 255, 255); text-align:center">Editando postagem</h2>
+    <input type="hidden" name="id" value="{{postagem._id}}">
+        <div style="margin-bottom: 20px;">
+            <label for="titulo">titulo</label>
+            <input type="text" name="titulo" id="titulo" value="{{postagem.titulo}}" style="width: 200px; border-radius:5px;">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="slug">Slug:</label>
+            <input type="text" name="slug" id="slug" value="{{postagem.slug}}" style="width: 230px;  border-radius:5px;">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="descricao">Descrição:</label>
+            <input type="text" name="descricao" id="descricao" value="{{postagem.descricao}}" style="width: 260px;  border-radius:5px;">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="conteudo" style="position: relative; top:-35px;">Conteúdo:</label>
+            <textarea name="conteudo" id="conteudo" style="width: 300px;  border-radius:5px;">{{postagem.conteudo}}</textarea>
+           
+        </div>
+        <select name="categoria" id="categoria" style="width: 100%; padding:7px; border-radius:5px; margin-bottom:20px">
+            {{#each categoria}}
+                <option value="{{_id}}">{{nome}}</option>
+            {{else}}
+                <option value="0">Nenhuma categoria registrada</option>
+            {{/each}}
+        </select>
+        <br>
+        <button type="submit" class="btn btn-success">Editar</button>
+    </form>
+</div>

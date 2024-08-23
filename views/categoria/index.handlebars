@@ -1,0 +1,16 @@
+<div  style="width: 1000px; margin: 0 auto;  color: rgba(255, 255, 255, 0.712); background-color:rgba(5, 5, 5, 0.692); padding:10px; padding-bottom:200px; height:auto; ">
+    <h2 style="margin-top: 30px;">Categorias</h2>
+    <hr>
+    <br>
+    {{#each categoria}}
+<div class="card mt-4" style="max-width:700px; margin:0 auto; background-color:rgba(14, 14, 177, 0.808);  color: rgba(255, 255, 255, 0.712);">
+    <div class="card-body" style="border-radius: 5px;">         
+        <a href="/categoria/{{slug}}" style="margin-right: 10px;"><button class="btn btn-success">X</button></a><h4 style="display: inline-block;">{{nome}}</h4><hr>        
+        <small><p style="display: inline-block;">Data de criação: </p>{{date}}</small>
+       
+    </div>
+</div>
+{{else}}
+<h1 class="mt-5" style="color: white; text-align:center; text-shadow:1px 1px 1px black">Nenhuma categoria resgistrada!</h1>
+{{/each}}   
+</div>

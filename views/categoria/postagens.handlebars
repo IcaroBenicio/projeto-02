@@ -1,0 +1,21 @@
+<div style="width: 1200px; margin: 0 auto;  color: rgba(255, 255, 255, 0.712); background-color:rgba(5, 5, 5, 0.692); padding:10px;">
+    <h2>Postagens <br>Categoria: {{categoria.nome}}</h2>
+    <hr>
+    
+    {{#each postagem}}
+    <div class="card mt-4" style="max-width:700px; margin:0 auto; background-color:rgba(30, 30, 163, 0.603);  color: rgba(255, 255, 255, 0.712);">
+        <div class="card-body" style="border-radius: 5px;">         
+            <h4 style="display: inline-block;">{{titulo}}</h4>  
+            <BR></BR>   
+            <p>Descrição: {{descricao}}</p>
+            <a href="/postagem/ver/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+            <hr>
+          
+            <br>
+            <small><p style="display: inline-block;">data de criação : </p>{{data}}</small>
+        </div>
+    </div>
+    {{else}}
+    <h1 class="mt-5" style="color: white; text-align:center; text-shadow:1px 1px 1px black">Nenhuma postagem resgistrada!</h1>
+    {{/each}}
+</div>

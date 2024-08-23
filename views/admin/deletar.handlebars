@@ -1,0 +1,20 @@
+<div style="background-color: rgba(0, 21, 39, 0.623); width:500px; height:600px; position:relative; left:50%; top:50%; transform: translate(-50%, -50%); color:white; font-family: Arial, Helvetica, sans-serif; border-radius:5px">
+    <a href="/admin/categorias"><button class="btn btn-success" style="margin: 9px 0 0px 9px;">Voltar</button></a>
+    <h2 style="padding-top:35px; text-align:center;">Deletando categoria</h2>
+   <div  style="padding-top: 75px">
+
+       <form action="/admin/deletando/categoria/{{categoria._id}}" method="post" style="padding: 15px;">
+         <div>
+            <h5>categoria:</h5>
+            <p>{{categoria.nome}}</p>
+            <h5>slug:</h5>
+            <p>{{categoria.slug}}</p>
+            <p>tem certeza que deseja deletar a categoria? para apagar aperte 'sim' caso não queira aperte 'voltar '. <br> <br> AVISO: depois de delatado se torna impossivel a reperação dos dados já deletados </p>
+            <br>
+            <div style="width: 130px; margin:0 auto">
+                <button type="submit" class="btn btn-danger">SIM</button>
+            </div>
+        </div>
+       </form>
+   </div>
+</div>

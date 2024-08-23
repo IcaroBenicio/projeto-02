@@ -1,0 +1,19 @@
+<div style="margin-left: 10%; margin-top:20px;">
+    <h2 style="color: rgba(255, 255, 255, 0.555);">lista de categorias</h2>
+    <a href="/admin/addcategorias"><button class="btn btn-success">Nova categoria</button></a>
+</div>
+<div>{{error}}</div>
+{{#each categorias}}
+<div class="card mt-4" style="max-width:700px; margin:0 auto; background-color:rgba(14, 14, 177, 0.808);  color: rgba(255, 255, 255, 0.712);">
+    <div class="card-body" style="border-radius: 5px;">         
+        <h4 style="display: inline-block;">{{nome}}</h4>
+        <a href="/admin/categorias/edit/{{_id}}"><button class="btn btn-success" style="display: inline-block; position:absolute;left:79%; top:5%;">editar</button></a>
+        <a href="/admin/deletar/categoria/{{_id}}"><button class="btn btn-danger" style="display: inline-block; position:absolute;left:89%; top:5%;">deletar</button></a>
+        <small style="display: block;">{{slug}}</small>
+        <small><p style="display: inline-block;">data de criação : </p>{{date}}</small>
+       
+    </div>
+</div>
+{{else}}
+<h1 class="mt-5" style="color: white; text-align:center; text-shadow:1px 1px 1px black">Nenhuma categoria resgistrada!</h1>
+{{/each}}   

@@ -1,0 +1,18 @@
+{{#each error}}
+<div class="alert alert-danger" style="width: 500px; position:relative; left:50%; transform:translateX(-50%)">{{text}}</div>
+{{else}}
+{{/each}}
+
+<form action="/admin/editar/{{categorias._id}}" method="post" style="position: absolute; top:50%; left:50%; transform:translate(-50%,-50%); border: 1px solid white; padding:40px 25px 40px 25px" >
+    <h2 style="margin-bottom: 20px; color:darkgray; text-shadow: 1px 1px 1px black">Editar categoria</h2> 
+    <div style="margin-bottom: 20px;">
+        <label for="nome" style="color: white;">Nome:</label>
+        <input type="text" id="nome" name="nome" value="{{categorias.nome}}" style="padding:5px 150px 5px 2px;">
+    </div>
+<div style="margin-bottom: 20px;">
+    
+        <label for="slug" style="color: white;">Slug:</label>
+        <input type="text" id="slug" name="slug" value="{{categorias.slug}}" style="padding:5px 100px 5px 2px;">
+</div>
+    <button type="submit" class="btn btn-success">Editar categoria</button>
+</form>

@@ -1,0 +1,26 @@
+<style>
+    html,body{
+        background: white;
+    }
+</style>
+<div style="height: 90vh;">
+   
+    <div class="card" style="width: 600px; position:relative; top:50%; left:50%; transform:translate(-50%,-50%);padding:20px; border-radius:5px;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.24);">
+        <div style="padding: 15px;">
+            <h1 style="text-align: center; margin-bottom:40px;">Faça login</h1>
+            <form action="/user/login" method="post">
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required style="display: block; margin-bottom:20px;  width:90%;height:35px;border-radius:5px;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.24);">
+                </div>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" required style="display: block;margin-bottom:20px;  width:90%;height:35px;border-radius:5px;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.24);">
+                </div>
+               
+                <br>
+                <button type="submit" class="btn btn-success">Entrar</button>
+            </form>
+        </div>
+    </div>
+</div>

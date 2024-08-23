@@ -1,0 +1,29 @@
+<div style="width: 1200px; margin: 0 auto;  color: rgba(255, 255, 255, 0.712); background-color:rgba(5, 5, 5, 0.692); padding:10px;">
+    <div class="jumbotron mt-3">
+      <h1 class="display-4">Bem vindo ao meu site de postagens!</h1>
+      <p class="lead">Essa ideia é simples, apenas um site de fabricação de posts e categorias que serão mostradas ao publico no final.</p>
+      <hr class="my-4">
+      <p>A intenção é criar um espaco onde as pessoas poderão postar suas ideias de maneira aberta pra todos verem.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Crie uma conta</a>
+      </p>
+    </div>
+    <hr>
+    <h2>Postagens recentes:</h2>
+    {{#each postagem}}
+    <div class="card mt-4" style="max-width:700px; margin:0 auto; background-color:rgba(30, 30, 163, 0.603);  color: rgba(255, 255, 255, 0.712);">
+        <div class="card-body" style="border-radius: 5px;">         
+            <h4 style="display: inline-block;">{{titulo}}</h4>  
+            <BR></BR>   
+            <p>Descrição: {{descricao}}</p>
+            <a href="/postagem/ver/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+            <hr>
+            <small>Categoria: {{categoria.nome}}</small>
+            <br>
+            <small><p style="display: inline-block;">data de criação : </p>{{data}}</small>
+        </div>
+    </div>
+    {{else}}
+    <h1 class="mt-5" style="color: white; text-align:center; text-shadow:1px 1px 1px black">Nenhuma postagem resgistrada!</h1>
+    {{/each}}
+</div>

@@ -76,6 +76,10 @@ const app = express()
    // o metodo use() do express serve pra configurações de middleware
    
 //ROTAS
+
+app.get('/picadocce',(res,req)=>{
+    res.send('vai se fuder')
+})
 app.get('/',(req, res)=>{
     ModelPost.find().populate('categoria').sort({data:'desc'}).lean().then((postagem)=>{
         res.render('index', {postagem:postagem})

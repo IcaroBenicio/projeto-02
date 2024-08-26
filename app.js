@@ -66,7 +66,7 @@ const app = express()
  
    //mongoose
    try {
-    mongoose.connect('mongodb://127.0.0.1:27017/blogapp')
+    mongoose.connect('mongodb+srv://benicio:icarogostoso@blog.ntxp8.mongodb.net/?retryWrites=true&w=majority&appName=Blog'  ||  'mongodb://127.0.0.1:27017/blogapp')
     console.log(`conectado ao banco de dados.`)
    } catch (error) {
     console.log(`erro ao tentar se conectar com o banco de dados. ERROR: ${error}`)
